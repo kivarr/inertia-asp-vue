@@ -1,0 +1,12 @@
+﻿@tailwind base;
+
+input, select, textarea, button, div, a {
+  &:focus, &:active {
+    outline: none;
+  }
+}
+
+@tailwind components;
+@import "form";
+
+@tailwind utilities;

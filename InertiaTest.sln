@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InertiaTest.WebApp", "InertiaTest.WebApp\InertiaTest.WebApp.csproj", "{75739692-FC99-4FED-BFCD-55FB45746350}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InertiaAdapter", "InertiaAdapter\InertiaAdapter.csproj", "{D2EE2B78-4F26-4FD9-B401-B2D888F120C6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{75739692-FC99-4FED-BFCD-55FB45746350}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75739692-FC99-4FED-BFCD-55FB45746350}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75739692-FC99-4FED-BFCD-55FB45746350}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75739692-FC99-4FED-BFCD-55FB45746350}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2EE2B78-4F26-4FD9-B401-B2D888F120C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2EE2B78-4F26-4FD9-B401-B2D888F120C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2EE2B78-4F26-4FD9-B401-B2D888F120C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2EE2B78-4F26-4FD9-B401-B2D888F120C6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

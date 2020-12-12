@@ -1,0 +1,17 @@
+﻿@using InertiaAdapter
+@using WebApp.Helpers
+@inject LaravelMixService LaravelMixService
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inertia</title>
+  </head>
+  <body>
+    @Inertia.Html(Model)
+
+  <!-- reference your js file. -->
+  <script src="@LaravelMixService.GetAsset("/js/main.js")" defer></script>
+  </body>
+</html>
