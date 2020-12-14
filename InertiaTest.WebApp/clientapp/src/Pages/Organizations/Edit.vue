@@ -86,13 +86,14 @@ interface Organization {
   city: string,
   region: string,
   country: string,
-  postal_code: string
+  postal_code: string,
+  deleted_at: string,
   contacts: Array<{}>
 }
 
 export default defineComponent({
   remember: 'form',
-  setup(props) {
+  setup() {
     const page = app.config.globalProperties.$inertia.page.props.controller;
     
     const organization = ref<Organization>(page.organization);

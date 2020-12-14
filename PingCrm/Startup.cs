@@ -10,16 +10,14 @@ using Microsoft.AspNetCore.Identity.UI;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.EntityFrameworkCore;
-using WebApp.Data;
+using PingCrm.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Serialization;
-using WebApp.Controllers;
+using PingCrm.Controllers;
 using WebApp.Helpers;
 
-namespace WebApp
+namespace PingCrm
 {
     public class Startup
     {
@@ -36,27 +34,18 @@ namespace WebApp
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlite(
                     Configuration.GetConnectionString("DefaultConnection")));
-            services.AddDefaultIdentity<User>(options =>
-                {
-                    options.SignIn.RequireConfirmedAccount = true;
-                })
-                .AddEntityFrameworkStores<ApplicationDbContext>();
+            services.AddDatabaseDeveloperPageExceptionFilter();
 
+            services.AddDefaultIdentity<User>(options => options.SignIn.RequireConfirmedAccount = true)
+                .AddEntityFrameworkStores<ApplicationDbContext>();
+            
             services.AddTransient<ApplicationUserStore>();
             services.AddSingleton<LaravelMixService>();
             services.AddControllersWithViews();
-            services.AddRazorPages();
-            services.AddHttpContextAccessor();
+            
             services.AddInertia();
             
-            services.AddAuthorization();
             services.ConfigureApplicationCookie(options => { options.LoginPath = "/Home/Login"; });
-
-            services.AddMvc().AddNewtonsoftJson(options =>
-            {
-                options.SerializerSettings.StringEscapeHandling = StringEscapeHandling.EscapeHtml;
-                options.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
-            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -66,7 +55,7 @@ namespace WebApp
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                app.UseDatabaseErrorPage();
+                app.UseMigrationsEndPoint();
             }
             else
             {

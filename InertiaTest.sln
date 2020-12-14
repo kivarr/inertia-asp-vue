@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InertiaTest.WebApp", "Inert
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InertiaAdapter", "InertiaAdapter\InertiaAdapter.csproj", "{D2EE2B78-4F26-4FD9-B401-B2D888F120C6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PingCrm", "PingCrm\PingCrm.csproj", "{F7C52EFF-AE65-4B5B-B333-991E73D2AF50}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{D2EE2B78-4F26-4FD9-B401-B2D888F120C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D2EE2B78-4F26-4FD9-B401-B2D888F120C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D2EE2B78-4F26-4FD9-B401-B2D888F120C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7C52EFF-AE65-4B5B-B333-991E73D2AF50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7C52EFF-AE65-4B5B-B333-991E73D2AF50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7C52EFF-AE65-4B5B-B333-991E73D2AF50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7C52EFF-AE65-4B5B-B333-991E73D2AF50}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

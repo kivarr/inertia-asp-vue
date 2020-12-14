@@ -90,7 +90,7 @@ const Ziggy = {
     }
 };
 
-const routeHelper = (name: any, params: any, absolute = false, config = Ziggy) => {
+const routeHelper = (name: any, params: {} = {}, absolute = false, config = Ziggy) => {
     return route(name, params, absolute, config);
 }
 
